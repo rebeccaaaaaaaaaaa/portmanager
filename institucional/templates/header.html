@@ -1,16 +1,21 @@
 
-    <header class="container d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <span class="fs-4"> PortManager</span>
-      </a>
+ {% load static%}
+ <header class="container d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+    <span class="fs-4"> <img src="{% static 'images/logo.svg' %}" alt=""></span>
+  </a>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Inicial</a></li>
-        <li class="nav-item"><a href="{% url 'advantages' %}" class="nav-link">Vantagens</a></li>
-        <li class="nav-item"><a href="{% url 'prices' %}" class="nav-link">Preços</a></li>
-        <li class="nav-item"><a href="{% url 'faq' %}" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">Sobre</a></li>
-        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contato</a></li>
-      </ul>
-    </header>
-  
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul class="nav-pills nav">
+      <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Inicial</a></li>
+      <li class="nav-item"><a href="{% url 'advantages' %}" class="nav-link">Vantagens</a></li>
+      <li class="nav-item"><a href="{% url 'prices' %}" class="nav-link">Preços</a></li>
+      <li class="nav-item"><a href="{% url 'faq' %}" class="nav-link">FAQs</a></li>
+      <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">Sobre</a></li>
+      <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contato</a></li>
+    </ul>
+  </div>
+  <a href="{% url 'contact' %}" class="btn-login"> Entrar </a>
+  <span style="color: #4845d2;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</header>

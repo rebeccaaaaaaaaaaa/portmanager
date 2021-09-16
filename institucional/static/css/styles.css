@@ -1,0 +1,90 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #4845d2eb;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 25%;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .align-center{
+    align-items: center;
+  }
+
+  .btn-outline {
+    color: #4845d2;
+    border-color: #4845d2;
+    padding: 10px 40px;
+    transition: all .6s;
+}
+
+.btn-outline:hover{
+
+  color: #fff;
+  background-color: #4845d2;
+}
+
+.nav {
+  justify-content: center;
+}
+
+.btn-login{
+  padding: 0 40px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: #4845d2;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.btn-login:hover{
+  color: #fff;
+  opacity: .9;
+}
+
+.card {
+  border: unset;
+}
+
+@media (max-width: 992px) {
+  .nav {
+    display: grid;
+ }
+
+ .btn-login {
+  margin-right: 0rem;
+}
+}
