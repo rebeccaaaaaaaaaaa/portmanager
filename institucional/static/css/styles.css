@@ -79,6 +79,7 @@
   border: unset;
 }
 
+
 @media (max-width: 992px) {
   .nav {
     display: grid;
