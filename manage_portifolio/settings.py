@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'institucional',
     'portifolio',
+    'account',
     'crispy_forms',
 ]
 
@@ -105,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -134,6 +134,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR /'media'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/portifolio/list'
 
-LOGOUT_REDIRECT_URL = '/portifolio/login'
+LOGOUT_REDIRECT_URL = '/account/login'
