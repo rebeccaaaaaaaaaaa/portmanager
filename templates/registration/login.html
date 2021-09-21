@@ -3,18 +3,18 @@
 {% load static%}
 {% load crispy_forms_tags %}
 <div class="form-signin text-center">
-  <form>
     <span class="fs-4"> <img src="{% static 'images/logo.svg' %}" alt=""></span>
     <h1 class="h3 my-3 fw-normal">Entrar no sistema</h1>
     <form method="post">
       {% csrf_token %}
-      <input type="hidden" name="next" value="{{ next }}" />
-      {% crispy form %}
+      <input type="hidden" name="next" value="{{ next }}">
+
+      {{ form|crispy }}
+
       <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-    </form>
-    <a href="/portifolio/register" class="links"><span> Voce ainda não é cadastrado? </span>  Criar conta </a>
+  </form>
+    <a href="/account/register" class="links"><span> Voce ainda não é cadastrado? </span>  Criar conta </a>
 
     <a href="/" class="links"><span> Para voltar a página inicial clique </span> aqui </a>
-  </form>
 </div>
 {% endblock %}
