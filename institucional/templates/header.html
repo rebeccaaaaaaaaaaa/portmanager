@@ -16,6 +16,11 @@
       <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contato</a></li>
     </ul>
   </div>
+  {% if user.is_authenticated %}
+  <a href="dashboard/list" class="btn-login"> Perfil </a>
+  <a href="account/logout" class="btn btn-danger mr-3"> Sair </a>
+  {% else %}
   <a href="account/login/" class="btn-login"> Entrar </a>
-  <span style="color: #4845d2;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  {% endif %}
+    <span style="color: #4845d2;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 </header>
