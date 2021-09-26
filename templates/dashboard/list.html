@@ -1,1 +1,20 @@
-<h1> olá {{user}}</h1>
+{% extends 'base.html' %}
+{% block title %} Lista de projetos - Gerenciador de Portifólio {% endblock %} 
+{% load static %} 
+{% block content %}
+
+{% include 'header.html' %}
+
+<section>
+    <div class="container">
+        <div class="menu-user">
+            <p>  Olá,  {{user}} </p>
+        </div>
+    </div>
+    {% for project in projects %}
+        <span><a href="">{{project.title}}</a></span>
+    {% endfor %}
+</section>
+  
+{% include 'footer.html' %}
+{% endblock %}
